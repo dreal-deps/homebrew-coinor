@@ -5,6 +5,11 @@ class Osi < Formula
   sha256 "c578256853109e33a8ad8f1917ca8850a027d8a0987ef87166d34de1a256a57d"
   head "https://projects.coin-or.org/svn/Osi/trunk"
 
+  bottle do
+    root_url 'https://dl.bintray.com/dreal/homebrew-coinor'
+    sha256 "e2095ca66d16620defd74a09feda94b1686aa29396ee1ae9f8f3dc6a8188af65" => :sierra
+  end
+
   option "with-glpk", "Build with interface to GLPK and support for reading AMPL/GMPL models" 
 
   glpk_dep = (build.with? "glpk") ? ["with-glpk"] : []
