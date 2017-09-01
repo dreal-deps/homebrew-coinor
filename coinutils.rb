@@ -5,10 +5,10 @@ class Coinutils < Formula
   sha256 "bedace82a76d4644efabb3a0bce03d5f00933a8500dbff084a7b7791aeb91561"
   revision 1
 
-#  bottle do
-#    root_url 'https://dl.bintray.com/dreal/homebrew-coinor'
-#    sha256 "895ba0853d197ccaffcd6b435e60366cf4a47dc2eb876cb0b48925a27c5f7dc8" => :sierra
-#  end
+  bottle do
+    root_url 'https://dl.bintray.com/dreal/homebrew-coinor'
+    sha256 "6e8cef11d2641be0e179533fd7dc227905aaa7bdb4d39f2e0148acac16a3c6e3" => :sierra
+  end
 
   option "with-glpk", "Build with support for reading AMPL/GMPL models" 
 
