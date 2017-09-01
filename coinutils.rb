@@ -3,11 +3,12 @@ class Coinutils < Formula
   homepage "http://www.coin-or.org/projects/CoinUtils.xml"
   url "http://www.coin-or.org/download/pkgsource/CoinUtils/CoinUtils-2.10.10.tgz"
   sha256 "bedace82a76d4644efabb3a0bce03d5f00933a8500dbff084a7b7791aeb91561"
+  revision 1
 
-  bottle do
-    root_url 'https://dl.bintray.com/dreal/homebrew-coinor'
-    sha256 "895ba0853d197ccaffcd6b435e60366cf4a47dc2eb876cb0b48925a27c5f7dc8" => :sierra
-  end
+#  bottle do
+#    root_url 'https://dl.bintray.com/dreal/homebrew-coinor'
+#    sha256 "895ba0853d197ccaffcd6b435e60366cf4a47dc2eb876cb0b48925a27c5f7dc8" => :sierra
+#  end
 
   option "with-glpk", "Build with support for reading AMPL/GMPL models" 
 
@@ -22,6 +23,11 @@ class Coinutils < Formula
 
   depends_on "homebrew/science/openblas" => :optional
   depends_on "homebrew/science/glpk448" if build.with? "glpk"
+
+  patch do
+    url "https://raw.githubusercontent.com/dreal-deps/homebrew-coinor/master/coinutils_coinhelperfunctions_no_register.patch"
+    sha256 "ff6e052c4ef478d3e86f51644d91e96fbd5f3bd161a2ec20a04d49c42bd34e3f"
+  end  
 
   def install
     args = ["--disable-debug",
