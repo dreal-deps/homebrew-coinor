@@ -11,6 +11,7 @@ matrix:
 
 script:
   - rm /usr/local/include/c++ # https://github.com/Homebrew/brew/issues/1742#issuecomment-277308817
+  - brew update
   - brew install dreal-deps/coinor/clp --build-from-source
 
 notifications:
