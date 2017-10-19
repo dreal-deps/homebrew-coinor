@@ -6,6 +6,8 @@ class CoinDataNetlib < Formula
   
   bottle do
     root_url 'https://dl.bintray.com/dreal/homebrew-coinor'
+    cellar :any_skip_relocation
+    sha256 "0fd1671d2fada5463b682053c511e5078599b8f559087b3ec63e6611b8b2ce44" => :high_sierra
     sha256 "abbf720fa8aeb4d3014157bd332390866c6adf544d3e8543a7dd5e1c49166a62" => :sierra
   end
 

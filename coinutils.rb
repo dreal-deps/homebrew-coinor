@@ -4,12 +4,14 @@ class Coinutils < Formula
   url "http://www.coin-or.org/download/pkgsource/CoinUtils/CoinUtils-2.10.14.tgz"
   sha256 "d18fa510ec3b3299d2da26660d7c7194e0f2be15199a5ff7f063e1454e23e40e"
 
-#  bottle do
-#    root_url 'https://dl.bintray.com/dreal/homebrew-coinor'
-#    sha256 "6e8cef11d2641be0e179533fd7dc227905aaa7bdb4d39f2e0148acac16a3c6e3" => :sierra
-#  end
+  bottle do
+    root_url 'https://dl.bintray.com/dreal/homebrew-coinor'
+    cellar :any
+    sha256 "91318abeb1ef43eea3fdbbbb8d295c7e10c5a673e040eb90d5d5bd875717f7d1" => :high_sierra
+#   sha256 "" => :sierra
+  end
 
-  option "with-glpk", "Build with support for reading AMPL/GMPL models" 
+  option "with-glpk", "Build with support for reading AMPL/GMPL models"
 
   depends_on :fortran
 
@@ -26,7 +28,7 @@ class Coinutils < Formula
   patch do
     url "https://raw.githubusercontent.com/dreal-deps/homebrew-coinor/master/coinutils_coinhelperfunctions_no_register.patch"
     sha256 "ff6e052c4ef478d3e86f51644d91e96fbd5f3bd161a2ec20a04d49c42bd34e3f"
-  end  
+  end
 
   def install
     args = ["--disable-debug",

@@ -5,10 +5,12 @@ class Clp < Formula
   sha256 "ad02cfabd3f3b658ebc091bbbc00a6e8dbdfdb41399b35cd17faee5dcce1ada6"
   head "https://projects.coin-or.org/svn/Clp/trunk"
 
-#  bottle do
-#    root_url 'https://dl.bintray.com/dreal/homebrew-coinor'
-#    sha256 "2dc7b339591b50ededfd304d4f72607b3dc72dac08efe9a8a756aba315a4a505" => :sierra
-#  end
+  bottle do
+    root_url 'https://dl.bintray.com/dreal/homebrew-coinor'
+    cellar :any
+    sha256 "1d541313789327567162443c807796fcb648bf1c84786179af5633964c01cfb5" => :high_sierra
+#   sha256 "" => :sierra
+  end
 
   option "with-glpk", "Build with support for reading AMPL/GMPL models"
 
