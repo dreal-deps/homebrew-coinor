@@ -1,14 +1,13 @@
 class Coinutils < Formula
   desc "Utilities used by other Coin-OR projects"
   homepage "http://www.coin-or.org/projects/CoinUtils.xml"
-  url "http://www.coin-or.org/download/pkgsource/CoinUtils/CoinUtils-2.10.10.tgz"
-  sha256 "bedace82a76d4644efabb3a0bce03d5f00933a8500dbff084a7b7791aeb91561"
-  revision 1
+  url "http://www.coin-or.org/download/pkgsource/CoinUtils/CoinUtils-2.10.14.tgz"
+  sha256 "d18fa510ec3b3299d2da26660d7c7194e0f2be15199a5ff7f063e1454e23e40e"
 
-  bottle do
-    root_url 'https://dl.bintray.com/dreal/homebrew-coinor'
-    sha256 "6e8cef11d2641be0e179533fd7dc227905aaa7bdb4d39f2e0148acac16a3c6e3" => :sierra
-  end
+#  bottle do
+#    root_url 'https://dl.bintray.com/dreal/homebrew-coinor'
+#    sha256 "6e8cef11d2641be0e179533fd7dc227905aaa7bdb4d39f2e0148acac16a3c6e3" => :sierra
+#  end
 
   option "with-glpk", "Build with support for reading AMPL/GMPL models" 
 
