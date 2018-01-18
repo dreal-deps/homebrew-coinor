@@ -23,7 +23,7 @@ class Symphony < Formula
   depends_on "osi"
   depends_on "clp" => (asl_dep + glpk_dep + mumps_dep + openblas_dep + suitesparse_dep)
   depends_on "cgl"
-  depends_on :fortran
+  depends_on "gcc"
   depends_on "pkg-config" => :build
 
   def install

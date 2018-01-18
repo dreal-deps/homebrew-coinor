@@ -31,7 +31,7 @@ class Clp < Formula
   depends_on "osi" => (glpk_dep + openblas_dep)
 
   depends_on "readline" => :recommended
-  depends_on :fortran
+  depends_on "gcc"
   depends_on "pkg-config" => :build
 
   def install

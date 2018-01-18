@@ -21,7 +21,7 @@ class Cbc < Formula
 
   depends_on "clp" => (asl_dep + glpk_dep + openblas_dep + mumps_dep + suite_sparse_dep)
   depends_on "cgl"
-  depends_on :fortran
+  depends_on "gcc"
   depends_on "pkg-config" => :build
 
   def install
