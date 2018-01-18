@@ -14,7 +14,7 @@ class Coinutils < Formula
 
   option "with-glpk", "Build with support for reading AMPL/GMPL models"
 
-  depends_on :fortran
+  depends_on "gcc"
 
   depends_on "coin_data_sample"
   depends_on "coin_data_netlib"
