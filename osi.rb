@@ -10,7 +10,7 @@ class Osi < Formula
     root_url 'https://dl.bintray.com/dreal/homebrew-coinor'
     cellar :any
     # sha256 "47db5523a5635f575761aac801b18ceb29798545ac0604617497cbf1b9e15e8a" => :el_capitan
-    # sha256 "bd3ab549426d295a66058c502e14a719b9f6eb270245d7cec2b591b9f37c69dc" => :high_sierra
+    sha256 "f1c979594abae16bafa90fe33f8d9d7d0ad7abe09da19d38c4991fa050aa0577" => :high_sierra
     # sha256 "e2095ca66d16620defd74a09feda94b1686aa29396ee1ae9f8f3dc6a8188af65" => :sierra
   end
 
