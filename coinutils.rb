@@ -3,13 +3,14 @@ class Coinutils < Formula
   homepage "http://www.coin-or.org/projects/CoinUtils.xml"
   url "http://www.coin-or.org/download/pkgsource/CoinUtils/CoinUtils-2.10.14.tgz"
   sha256 "d18fa510ec3b3299d2da26660d7c7194e0f2be15199a5ff7f063e1454e23e40e"
+  revision 1
 
   bottle do
     root_url 'https://dl.bintray.com/dreal/homebrew-coinor'
     cellar :any
-    sha256 "cca61c8f9974d6544250a307e79eca2c8ef7d95b838390a107931b98c174af87" => :el_capitan
-    sha256 "91318abeb1ef43eea3fdbbbb8d295c7e10c5a673e040eb90d5d5bd875717f7d1" => :high_sierra
-    sha256 "c3df7933b7834eec84da586fad3e0561e152ca030289622129e0a25e999ba914" => :sierra
+    # sha256 "cca61c8f9974d6544250a307e79eca2c8ef7d95b838390a107931b98c174af87" => :el_capitan
+    # sha256 "91318abeb1ef43eea3fdbbbb8d295c7e10c5a673e040eb90d5d5bd875717f7d1" => :high_sierra
+    # sha256 "c3df7933b7834eec84da586fad3e0561e152ca030289622129e0a25e999ba914" => :sierra
   end
 
   option "with-glpk", "Build with support for reading AMPL/GMPL models"
@@ -62,5 +63,7 @@ class Coinutils < Formula
     ENV.deparallelize  # make install fails in parallel.
     system "make", "test"
     system "make", "install"
+
+    inreplace "#{lib}/pkgconfig/coinutils.pc", prefix, opt_prefix
   end
 end

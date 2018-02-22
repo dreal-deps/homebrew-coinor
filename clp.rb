@@ -4,13 +4,14 @@ class Clp < Formula
   url "http://www.coin-or.org/download/pkgsource/Clp/Clp-1.16.11.tgz"
   sha256 "ad02cfabd3f3b658ebc091bbbc00a6e8dbdfdb41399b35cd17faee5dcce1ada6"
   head "https://projects.coin-or.org/svn/Clp/trunk"
+  revision 1
 
   bottle do
     root_url 'https://dl.bintray.com/dreal/homebrew-coinor'
     cellar :any
-    sha256 "ec7adbd3086d8af97c85ada3bca3b84a5b8c464907a7d755b5b70abc72d862b5" => :el_capitan
-    sha256 "1d541313789327567162443c807796fcb648bf1c84786179af5633964c01cfb5" => :high_sierra
-    sha256 "6a6f2f239b9b9840c4926ae01f0a11a335ab3166408f65a814753dd1f99cb55d" => :sierra
+    # sha256 "ec7adbd3086d8af97c85ada3bca3b84a5b8c464907a7d755b5b70abc72d862b5" => :el_capitan
+    # sha256 "1d541313789327567162443c807796fcb648bf1c84786179af5633964c01cfb5" => :high_sierra
+    # sha256 "6a6f2f239b9b9840c4926ae01f0a11a335ab3166408f65a814753dd1f99cb55d" => :sierra
   end
 
   option "with-glpk", "Build with support for reading AMPL/GMPL models"
@@ -83,5 +84,8 @@ class Clp < Formula
     system "make", "test"
     ENV.deparallelize # make install fails in parallel.
     system "make", "install"
+
+    inreplace "#{lib}/pkgconfig/clp.pc", prefix, opt_prefix
+    inreplace "#{lib}/pkgconfig/osi-clp.pc", prefix, opt_prefix
   end
 end
