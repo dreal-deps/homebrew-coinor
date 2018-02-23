@@ -11,7 +11,7 @@ class Osi < Formula
     cellar :any
     # sha256 "47db5523a5635f575761aac801b18ceb29798545ac0604617497cbf1b9e15e8a" => :el_capitan
     sha256 "f1c979594abae16bafa90fe33f8d9d7d0ad7abe09da19d38c4991fa050aa0577" => :sierra
-    # sha256 "e2095ca66d16620defd74a09feda94b1686aa29396ee1ae9f8f3dc6a8188af65" => :high_sierra
+    sha256 "fa7ff052cb881819cafdc989995c7960c7ebf53cbfd0dd602db97039223c8fee" => :high_sierra
   end
 
   option "with-glpk", "Build with interface to GLPK and support for reading AMPL/GMPL models"

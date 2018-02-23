@@ -10,7 +10,7 @@ class Coinutils < Formula
     cellar :any
     # sha256 "cca61c8f9974d6544250a307e79eca2c8ef7d95b838390a107931b98c174af87" => :el_capitan
     sha256 "1cdaedb187307fc10cc47f314cdf53794286534ceb546a28f2603718d88098d6" => :sierra
-    # sha256 "c3df7933b7834eec84da586fad3e0561e152ca030289622129e0a25e999ba914" => :high_sierra
+    sha256 "3e0b777a567b0906b94835720503ceab4f3bb1a6fdc66366a0edddbc3d79e38f" => :high_sierra
   end
 
   option "with-glpk", "Build with support for reading AMPL/GMPL models"
