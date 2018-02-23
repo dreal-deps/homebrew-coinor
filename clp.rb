@@ -10,8 +10,8 @@ class Clp < Formula
     root_url 'https://dl.bintray.com/dreal/homebrew-coinor'
     cellar :any
     # sha256 "ec7adbd3086d8af97c85ada3bca3b84a5b8c464907a7d755b5b70abc72d862b5" => :el_capitan
-    sha256 "81d6ba25229cc9657d5f825145a3c9f2a5ffcd032ce806c118e46022e6d15cca" => :high_sierra
-    # sha256 "6a6f2f239b9b9840c4926ae01f0a11a335ab3166408f65a814753dd1f99cb55d" => :sierra
+    sha256 "81d6ba25229cc9657d5f825145a3c9f2a5ffcd032ce806c118e46022e6d15cca" => :sierra
+    # sha256 "6a6f2f239b9b9840c4926ae01f0a11a335ab3166408f65a814753dd1f99cb55d" => :high_sierra
   end
 
   option "with-glpk", "Build with support for reading AMPL/GMPL models"

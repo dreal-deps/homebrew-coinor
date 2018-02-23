@@ -6,7 +6,6 @@ ID=$1
 PASSWORD=$2
 FORMULA_NAME=$3
 VERSION=$4
-REVISION=$5
 case `uname -r` in
   14.*)
     OSX_NAME="yosemite"
@@ -25,7 +24,7 @@ case `uname -r` in
     ;;
 esac
 
-BOTTLE_FILENAME=${FORMULA_NAME}-${VERSION}_${REVISION}.${OSX_NAME}.bottle.tar.gz
+BOTTLE_FILENAME=${FORMULA_NAME}-${VERSION}.${OSX_NAME}.bottle.tar.gz
 BINTRAY_URL=https://api.bintray.com/content/dreal/homebrew-coinor/${FORMULA_NAME}
 
 if [ -e ${BOTTLE_FILENAME} ]
@@ -36,6 +35,6 @@ then
   curl -X POST -u${ID}:${PASSWORD} ${BINTRAY_URL}/${VERSION}/publish
   # Remove the bottle
   rm -v ${BOTTLE_FILENAME}
-else 
+else
   echo "File not found: ${BOTTLE_FILENAME}"
 fi
