@@ -1,12 +1,12 @@
 class CoinDataNetlib < Formula
   desc "Netlib LP models"
-  homepage "http://www.coin-or.org/download/pkgsource/Data"
-  url "http://www.coin-or.org/download/pkgsource/Data/Data-Netlib-1.2.6.tgz"
+  homepage "https://www.coin-or.org/download/pkgsource/Data"
+  url "https://www.coin-or.org/download/pkgsource/Data/Data-Netlib-1.2.6.tgz"
   sha256 "dd687e5a35087ae0da825c5e24832b2ebaacc36a2ee73df084d4ef92e575e1ab"
   revision 1
 
   bottle do
-    root_url 'https://dl.bintray.com/dreal/homebrew-coinor'
+    root_url "https://dl.bintray.com/dreal/homebrew-coinor"
     cellar :any_skip_relocation
     sha256 "f3204a4ba05c540f1fa799dbe40b2f81e9e89e0d8e796bf0af56fef3708d8a79" => :el_capitan
     sha256 "395d159d32a1d1f974b9e3186b669c4fa22d4d2057330fcc2270abec3ba75e95" => :sierra
@@ -22,5 +22,9 @@ class CoinDataNetlib < Formula
     system "make", "install"
 
     inreplace "#{lib}/pkgconfig/coindatanetlib.pc", prefix, opt_prefix
+  end
+
+  test do
+    nil
   end
 end
