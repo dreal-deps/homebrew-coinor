@@ -13,14 +13,12 @@ class Coinutils < Formula
     sha256 "3e0b777a567b0906b94835720503ceab4f3bb1a6fdc66366a0edddbc3d79e38f" => :high_sierra
   end
 
-  depends_on "gcc"
-
-  depends_on "coin_data_sample"
-  depends_on "coin_data_netlib"
-
-  depends_on "doxygen"
   depends_on "graphviz" => :build # For documentation.
   depends_on "pkg-config" => :build
+  depends_on "coin_data_netlib"
+  depends_on "coin_data_sample"
+  depends_on "doxygen"
+  depends_on "gcc"
 
   patch do
     url "https://raw.githubusercontent.com/dreal-deps/homebrew-coinor/master/coinutils_coinhelperfunctions_no_register.patch"

@@ -4,7 +4,6 @@ class Osi < Formula
   url "https://www.coin-or.org/download/pkgsource/Osi/Osi-0.107.5.tgz"
   sha256 "c578256853109e33a8ad8f1917ca8850a027d8a0987ef87166d34de1a256a57d"
   revision 1
-  head "https://projects.coin-or.org/svn/Osi/trunk"
 
   bottle do
     root_url "https://dl.bintray.com/dreal/homebrew-coinor"
