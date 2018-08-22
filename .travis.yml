@@ -13,9 +13,10 @@ matrix:
       compiler: clang
 
 script:
-  - brew audit --strict --online *.rb  # --new-formula is not ready because of coinutils.
   - rm /usr/local/include/c++ # https://github.com/Homebrew/brew/issues/1742#issuecomment-277308817
   - brew update
+  - brew upgrade
+  - brew audit --strict --online *.rb  # --new-formula is not ready because of coinutils.
   - brew install dreal-deps/coinor/clp --build-from-source
 
 notifications:
