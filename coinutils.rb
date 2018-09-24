@@ -8,9 +8,9 @@ class Coinutils < Formula
   bottle do
     root_url "https://dl.bintray.com/dreal/homebrew-coinor"
     cellar :any
-    sha256 "c59ad3d741d9e0bbe7fe1625b84f70248f92cedfab2000b9b51a922b2b470598" => :el_capitan
     sha256 "1cdaedb187307fc10cc47f314cdf53794286534ceb546a28f2603718d88098d6" => :sierra
     sha256 "3e0b777a567b0906b94835720503ceab4f3bb1a6fdc66366a0edddbc3d79e38f" => :high_sierra
+    sha256 "d8edd7565281e1f660318b5d73686a7d8d5dfdb39e0408c3be8eb5fec1f2cb34" => :mojave
   end
 
   depends_on "graphviz" => :build # For documentation.

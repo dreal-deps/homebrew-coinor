@@ -8,9 +8,9 @@ class Clp < Formula
   bottle do
     root_url "https://dl.bintray.com/dreal/homebrew-coinor"
     cellar :any
-    sha256 "d280f95737a05bcbaf6187dc15a9701a9b54ff1723260ee7790de4a17e85c7be" => :el_capitan
     sha256 "81d6ba25229cc9657d5f825145a3c9f2a5ffcd032ce806c118e46022e6d15cca" => :sierra
     sha256 "1884d4a36205b0469195ec87fedc3f45936c2340c49e3638f58273664ff38ffb" => :high_sierra
+    sha256 "6bdd427e124f7325d98c2b956559949f669e6c5929d35bd11710aa68bfb6a8fd" => :mojave
   end
 
   depends_on "pkg-config" => :build

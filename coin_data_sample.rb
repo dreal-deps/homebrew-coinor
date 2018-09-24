@@ -11,6 +11,7 @@ class CoinDataSample < Formula
     sha256 "eaeabf5132e4acbd564829f32e35decd2c60a65efcda63cb0c3ccea5bd393dab" => :el_capitan
     sha256 "0712f8c25ddbb6a9f6959cd20d21b3ea466a6b0fa75ceae3e153bfb55f65fddf" => :sierra
     sha256 "3722a7dfad53d3b1f2ae1780f8d072e30b0e955d0f577a50ec82acb8e3bb849d" => :high_sierra
+    sha256 "546ef06050a3179b700186577ab23af8df7272a2eb8c78d717902a73c0ba9568" => :mojave
   end
 
   def install
