@@ -3,7 +3,7 @@ class Coinutils < Formula
   homepage "https://projects.coin-or.org/CoinUtils"
   url "https://www.coin-or.org/download/pkgsource/CoinUtils/CoinUtils-2.10.14.tgz"
   sha256 "d18fa510ec3b3299d2da26660d7c7194e0f2be15199a5ff7f063e1454e23e40e"
-  revision 1
+  revision 2
 
   bottle do
     root_url "https://dl.bintray.com/dreal/homebrew-coinor"
@@ -17,7 +17,7 @@ class Coinutils < Formula
   depends_on "pkg-config" => :build
   depends_on "coin_data_netlib"
   depends_on "coin_data_sample"
-  depends_on "doxygen"
+  depends_on "doxygen" => :build
   depends_on "gcc"
 
   patch do
