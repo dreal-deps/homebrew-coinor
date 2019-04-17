@@ -1,16 +1,15 @@
 class Clp < Formula
   desc "Linear programming solver"
   homepage "https://projects.coin-or.org/Clp"
-  url "https://www.coin-or.org/download/pkgsource/Clp/Clp-1.16.11.tgz"
-  sha256 "ad02cfabd3f3b658ebc091bbbc00a6e8dbdfdb41399b35cd17faee5dcce1ada6"
-  revision 1
+  url "https://www.coin-or.org/download/pkgsource/Clp/Clp-1.17.1.tgz"
+  sha256 "304ddb7bf2fbf96a9378f9a8cc30ef5f0f309dd08096143987f094e76a945e7d"
 
   bottle do
     root_url "https://dl.bintray.com/dreal/homebrew-coinor"
     cellar :any
-    sha256 "81d6ba25229cc9657d5f825145a3c9f2a5ffcd032ce806c118e46022e6d15cca" => :sierra
-    sha256 "1884d4a36205b0469195ec87fedc3f45936c2340c49e3638f58273664ff38ffb" => :high_sierra
-    sha256 "6bdd427e124f7325d98c2b956559949f669e6c5929d35bd11710aa68bfb6a8fd" => :mojave
+    sha256 "c01a501f6f2b1c8692134866d2afc894327cff3012a7e7796b381ccc1460bf96" => :sierra
+    sha256 "30b5075242fe6d38ea3bf4aa378462a7ba97131ef2097ebc775fa17aa42f93f2" => :high_sierra
+    sha256 "529bfe7f4b3ddd842ffb6b6e49514932b2a6065aeba225ade6647ed3419168a4" => :mojave
   end
 
   depends_on "pkg-config" => :build
