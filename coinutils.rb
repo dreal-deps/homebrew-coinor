@@ -1,16 +1,15 @@
 class Coinutils < Formula
   desc "Utilities used by other Coin-OR projects"
   homepage "https://projects.coin-or.org/CoinUtils"
-  url "https://www.coin-or.org/download/pkgsource/CoinUtils/CoinUtils-2.10.14.tgz"
-  sha256 "d18fa510ec3b3299d2da26660d7c7194e0f2be15199a5ff7f063e1454e23e40e"
-  revision 2
+  url "https://www.coin-or.org/download/pkgsource/CoinUtils/CoinUtils-2.11.1.tgz"
+  sha256 "1814d6266d00b313fe07fe8b011528243df27c033e7cc630e4a05929da4acaa0"
 
   bottle do
     root_url "https://dl.bintray.com/dreal/homebrew-coinor"
     cellar :any
-    sha256 "da0b2a6dfa04fc923a38fd5c63c07ef175eb65b03e2d1ffcdfc383f5133c2897" => :sierra
-    sha256 "5c37fcfce37ff2f779236f7054051b882f5637086318564f7f2476c694cebbbc" => :high_sierra
-    sha256 "66667be7ce13ffbabd2c7bd14c02caf1e0106a648a64dcd36a789e07d849bfbf" => :mojave
+    sha256 "c251af9ce6a8a66eaeee6135c2f700d4e51409f0f4f5a376cd9cabbf0eb1f1a7" => :sierra
+    sha256 "a01cf46c2d53db616f8bde4f715b7ed6fc09bf488ef3f0dde0a10ddb3e5e8435" => :high_sierra
+    sha256 "8843b5a42a337e668c8212571ab1a436bb83de7c94af97958ce930b6d0f1d40c" => :mojave
   end
 
   depends_on "graphviz" => :build # For documentation.
@@ -19,11 +18,6 @@ class Coinutils < Formula
   depends_on "coin_data_sample"
   depends_on "doxygen" => :build
   depends_on "gcc"
-
-  patch do
-    url "https://raw.githubusercontent.com/dreal-deps/homebrew-coinor/master/coinutils_coinhelperfunctions_no_register.patch"
-    sha256 "ff6e052c4ef478d3e86f51644d91e96fbd5f3bd161a2ec20a04d49c42bd34e3f"
-  end
 
   def install
     args = ["--disable-debug",
